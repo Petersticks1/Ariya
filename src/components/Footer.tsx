@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
-import { Mail, Phone, MapPin, Globe, Share2, Send } from 'lucide-react';
+import { Icon } from '@iconify/react';
+
 import { QRCodeSVG } from 'qrcode.react';
 import logo from '../assets/logo.png';
 
@@ -18,14 +19,14 @@ const Footer = () => {
               Elevating every experience with premium hospitality, wellness, and lifestyle services in the heart of the city.
             </p>
             <div className="flex gap-4">
-              <a href="#" className="p-2 border border-primary/20 rounded-full hover:bg-primary/10 transition-colors text-primary">
-                <Globe size={18} />
+              <a href="#" className="p-2 border border-primary/20 rounded-full hover:bg-primary/10 transition-colors text-primary" aria-label="Instagram">
+                <Icon icon="lucide:instagram" width="18" height="18" />
               </a>
-              <a href="#" className="p-2 border border-primary/20 rounded-full hover:bg-primary/10 transition-colors text-primary">
-                <Share2 size={18} />
+              <a href="#" className="p-2 border border-primary/20 rounded-full hover:bg-primary/10 transition-colors text-primary" aria-label="Facebook">
+                <Icon icon="lucide:facebook" width="18" height="18" />
               </a>
-              <a href="#" className="p-2 border border-primary/20 rounded-full hover:bg-primary/10 transition-colors text-primary">
-                <Send size={18} />
+              <a href="#" className="p-2 border border-primary/20 rounded-full hover:bg-primary/10 transition-colors text-primary" aria-label="TikTok">
+                <Icon icon="simple-icons:tiktok" width="18" height="18" />
               </a>
             </div>
           </div>
@@ -48,16 +49,23 @@ const Footer = () => {
             <h4 className="font-serif text-xl uppercase tracking-[2px] text-text mb-6">Contact</h4>
             <div className="space-y-4">
               <div className="flex items-start gap-3">
-                <MapPin className="text-primary mt-1 flex-shrink-0" size={18} />
-                <p className="text-text-muted">123 ARIYA Avenue, Victoria Island, Lagos, Nigeria</p>
+                <Icon icon="lucide:map-pin" className="text-primary mt-1 flex-shrink-0" width="18" height="18" />
+                <div className="space-y-2">
+                  <p className="text-text-muted">9, olabisi onabanjo way Tirimi behind OGTV Abeokuta Ogun State.</p>
+                  <p className="text-text-muted">Metropark park Estate, 9 olabisi onabanjo way Tirimi behind OGTV Abeokuta Ogun State.</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-3">
+                <Icon icon="lucide:phone" className="text-primary flex-shrink-0 mt-1" width="18" height="18" />
+                <div className="space-y-1">
+                  <p className="text-text-muted">07035168224</p>
+                  <p className="text-text-muted">09076021353</p>
+                  <p className="text-text-muted">08107419905</p>
+                </div>
               </div>
               <div className="flex items-center gap-3">
-                <Phone className="text-primary flex-shrink-0" size={18} />
-                <p className="text-text-muted">+234 813 908 4131</p>
-              </div>
-              <div className="flex items-center gap-3">
-                <Mail className="text-primary flex-shrink-0" size={18} />
-                <p className="text-text-muted">adebayopetergvmc68@gmail.com</p>
+                <Icon icon="lucide:mail" className="text-primary flex-shrink-0" width="18" height="18" />
+                <p className="text-text-muted">ariyaeventhall@gmail.com</p>
               </div>
             </div>
           </div>

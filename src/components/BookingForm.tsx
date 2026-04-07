@@ -1,6 +1,7 @@
 import { useForm } from 'react-hook-form';
 import { formatWhatsAppMessage, formatEmailLink } from '../utils/communication';
-import { Send, Mail } from 'lucide-react';
+import { Icon } from '@iconify/react';
+
 
 const BookingForm = ({ title, fields, dualContact = false }: any) => {
   const { register, handleSubmit, formState: { errors } } = useForm();
@@ -30,12 +31,12 @@ const BookingForm = ({ title, fields, dualContact = false }: any) => {
                 {...register(field.name, { required: field.required })}
                 placeholder={field.placeholder || `Enter ${field.label.toLowerCase()}`}
                 rows={4}
-                className="bg-transparent border-b border-primary/20 focus:border-primary text-white w-full py-3 resize-none"
+                className="bg-transparent border-b border-primary/20 focus:border-primary text-text w-full py-3 resize-none"
               />
             ) : field.type === 'select' ? (
               <select
                 {...register(field.name, { required: field.required })}
-                className="bg-background/50 border-b border-primary/20 focus:border-primary text-white w-full py-3 outline-none"
+                className="bg-background/50 border-b border-primary/20 focus:border-primary text-text w-full py-3 outline-none"
               >
                 <option value="">Select {field.label}</option>
                 {field.options.map(opt => <option key={opt} value={opt}>{opt}</option>)}
@@ -45,7 +46,7 @@ const BookingForm = ({ title, fields, dualContact = false }: any) => {
                 type={field.type || 'text'}
                 {...register(field.name, { required: field.required })}
                 placeholder={field.placeholder || `Enter ${field.label.toLowerCase()}`}
-                className="bg-transparent border-b border-primary/20 focus:border-primary text-white w-full py-3 transition-all"
+                className="bg-transparent border-b border-primary/20 focus:border-primary text-text w-full py-3 transition-all"
               />
             )}
             {errors[field.name] && <p className="text-red-400 text-[10px] mt-1 uppercase tracking-[1px]">This field is required</p>}
@@ -59,7 +60,7 @@ const BookingForm = ({ title, fields, dualContact = false }: any) => {
           onClick={handleSubmit(onWhatsAppSubmit)}
           className="flex-grow primary flex items-center justify-center gap-3 active:scale-95 transition-transform"
         >
-          <Send size={18} /> Send via WhatsApp
+          <Icon icon="lucide:send" width="18" height="18" /> Send via WhatsApp
         </button>
         {dualContact && (
           <button
@@ -67,7 +68,7 @@ const BookingForm = ({ title, fields, dualContact = false }: any) => {
             onClick={handleSubmit(onEmailSubmit)}
             className="flex-grow secondary flex items-center justify-center gap-3 active:scale-95 transition-transform"
           >
-            <Mail size={18} /> Send via Email
+            <Icon icon="lucide:mail" width="18" height="18" /> Send via Email
           </button>
         )}
       </div>

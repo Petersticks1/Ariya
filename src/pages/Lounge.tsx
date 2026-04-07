@@ -18,7 +18,7 @@ const Lounge = () => {
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16">
           <div className="max-w-2xl">
             <h6 className="text-[12px] uppercase tracking-[4px] text-primary mb-4">Ariya Lounge</h6>
-            <h1 className="text-4xl md:text-6xl font-serif text-white uppercase tracking-[1px] leading-tight">Elevated Ambience & <br /><span className="text-primary italic">Premium Drinks</span></h1>
+            <h1 className="text-4xl md:text-6xl font-serif text-text uppercase tracking-[1px] leading-tight">Elevated Ambience & <br /><span className="text-primary italic">Premium Drinks</span></h1>
             <p className="text-text-muted mt-8 text-lg leading-relaxed max-w-xl">
               Unwind in a sophisticated space designed for relaxation and premium social experiences. Perfect for VIP gatherings and quiet escapes.
             </p>

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { MessageSquare, LayoutGrid, List } from 'lucide-react';
+import { Icon } from '@iconify/react';
 import { formatWhatsAppMessage } from '../utils/communication';
 
 const fabrics = [
@@ -33,7 +33,7 @@ const Fabrics = () => {
       <div className="max-w-7xl mx-auto px-4 md:px-6">
         <div className="text-center mb-24 max-w-4xl mx-auto">
           <h6 className="text-[12px] uppercase tracking-[4px] text-primary mb-4">Ariya Fabrics</h6>
-          <h1 className="text-4xl md:text-6xl font-serif text-white uppercase tracking-[1px] leading-tight mb-8">Exquisite Textiles & <br /><span className="text-primary italic">Timeless Patterns</span></h1>
+          <h1 className="text-4xl md:text-6xl font-serif text-text uppercase tracking-[1px] leading-tight mb-8">Exquisite Textiles & <br /><span className="text-primary italic">Timeless Patterns</span></h1>
           <p className="text-text-muted text-lg leading-relaxed mb-12">
             Explore our curated collection of premium African and International fabrics. From ceremonial lace to everyday cotton.
           </p>
@@ -73,16 +73,16 @@ const Fabrics = () => {
                     {fabric.availableYards} Yards Available
                   </span>
                 </div>
-                <h3 className="text-3xl font-serif text-white uppercase tracking-[1px] mb-4 group-hover:text-primary transition-colors">{fabric.name}</h3>
+                <h3 className="text-3xl font-serif text-text uppercase tracking-[1px] mb-4 group-hover:text-primary transition-colors">{fabric.name}</h3>
                 <div className="flex items-baseline gap-2 mb-10">
-                  <span className="text-4xl font-serif text-white">{fabric.pricePerYard}</span>
+                  <span className="text-4xl font-serif text-text">{fabric.pricePerYard}</span>
                   <span className="text-text-muted text-[10px] uppercase tracking-[2px]">/ Yard</span>
                 </div>
                 <button 
                   onClick={() => handleRequest(fabric)}
                   className="mt-auto primary w-full flex items-center justify-center gap-3 py-5 text-sm"
                 >
-                  <MessageSquare size={18} /> Request via WhatsApp
+                  <Icon icon="lucide:message-square" width="18" height="18" /> Request via WhatsApp
                 </button>
               </div>
             </motion.div>

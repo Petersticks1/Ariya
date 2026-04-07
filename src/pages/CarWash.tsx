@@ -20,7 +20,7 @@ const CarWash = () => {
       <div className="max-w-7xl mx-auto px-4 md:px-6">
         <div className="text-center mb-24 max-w-3xl mx-auto">
           <h6 className="text-[12px] uppercase tracking-[4px] text-primary mb-4">Ariya Car Wash</h6>
-          <h1 className="text-4xl md:text-6xl font-serif text-white uppercase tracking-[1px] leading-tight mb-8">Professional Car Care <br /><span className="text-primary italic">& Detailing</span></h1>
+          <h1 className="text-4xl md:text-6xl font-serif text-text uppercase tracking-[1px] leading-tight mb-8">Professional Car Care <br /><span className="text-primary italic">& Detailing</span></h1>
           <p className="text-text-muted text-lg leading-relaxed">
             Give your vehicle the premium treatment it deserves. Our expert team ensures your car looks its best, every single time.
           </p>
@@ -42,7 +42,7 @@ const CarWash = () => {
 
         <div id="order-form" className="max-w-4xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-serif text-white uppercase tracking-[1px] mb-4">Car Wash Membership</h2>
+            <h2 className="text-3xl md:text-5xl font-serif text-text uppercase tracking-[1px] mb-4">Car Wash Membership</h2>
             <p className="text-text-muted uppercase tracking-[2px] text-sm">Select a plan and tell us about your vehicle.</p>
           </div>
           <BookingForm title="Car Wash Membership" fields={carWashFields} />

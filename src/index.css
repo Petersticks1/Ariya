@@ -17,17 +17,17 @@
     @apply bg-transparent border-b border-text-muted/30 focus:border-primary transition-colors py-2 mb-4 w-full outline-none;
   }
 
-  button.primary {
-    @apply bg-primary text-background font-serif uppercase tracking-[3px] py-3 px-8 hover:bg-primary-dark transition-colors min-h-[48px];
+  .primary {
+    @apply bg-primary text-background font-serif uppercase tracking-[3px] py-4 px-10 hover:bg-white transition-all duration-500 min-h-[56px] inline-flex items-center justify-center text-center shadow-[0_0_20px_rgba(184,151,42,0.3)] hover:shadow-[0_0_30px_rgba(184,151,42,0.5)] transform hover:-translate-y-1;
   }
 
-  button.secondary {
-    @apply border border-primary text-primary font-serif uppercase tracking-[3px] py-3 px-8 hover:bg-primary hover:text-background transition-all min-h-[48px];
+  .secondary {
+    @apply border border-primary/50 text-white font-serif uppercase tracking-[3px] py-4 px-10 hover:bg-primary hover:text-background transition-all duration-500 min-h-[56px] inline-flex items-center justify-center text-center backdrop-blur-sm transform hover:-translate-y-1;
   }
 }
 
 .section-padding {
-  @apply py-[120px];
+  @apply py-20 md:py-32 lg:py-40;
 }
 
 .card-gold-accent {

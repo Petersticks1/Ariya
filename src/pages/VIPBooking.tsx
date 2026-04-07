@@ -21,7 +21,7 @@ const VIPBooking = () => {
         <div className="bg-background/80 backdrop-blur-md p-10 md:p-20 rounded-3xl border border-primary/20 shadow-2xl">
           <div className="text-center mb-24 max-w-3xl mx-auto">
             <h6 className="text-[12px] uppercase tracking-[4px] text-primary mb-4">Ariya VIP Room</h6>
-            <h1 className="text-4xl md:text-6xl font-serif text-white uppercase tracking-[1px] leading-tight mb-8">Exclusive & <br /><span className="text-primary italic">Sophisticated Space</span></h1>
+            <h1 className="text-4xl md:text-6xl font-serif text-text uppercase tracking-[1px] leading-tight mb-8">Exclusive & <br /><span className="text-primary italic">Sophisticated Space</span></h1>
             <p className="text-text-muted text-lg leading-relaxed">
               Hosting a private board meeting, a celebrate a quiet birthday, or a discrete cocktail experience? Our VIP room provides the ultimate sanctuary.
             </p>

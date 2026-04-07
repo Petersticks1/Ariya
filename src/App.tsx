@@ -1,5 +1,7 @@
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
+import { AnimatePresence } from 'framer-motion';
+import Loader from './components/Loader';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import WhatsAppButton from './components/WhatsAppButton';
@@ -15,6 +17,8 @@ import Catering from './pages/Catering';
 import Minimart from './pages/Minimart';
 import Fabrics from './pages/Fabrics';
 import Contact from './pages/Contact';
+import About from './pages/About';
+import Gallery from './pages/Gallery';
 import './index.css';
 
 const ScrollToTop = () => {
@@ -26,12 +30,26 @@ const ScrollToTop = () => {
 };
 
 function App() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // Artificial delay to show the beautiful loader
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 3000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <>
+      <AnimatePresence mode="wait">
+        {loading && <Loader />}
+      </AnimatePresence>
 
       <Router>
         <ScrollToTop />
-        <div className="flex flex-col min-h-screen bg-background text-text">
+        <div className={`flex flex-col min-h-screen bg-background text-text transition-opacity duration-1000 ${loading ? 'opacity-0' : 'opacity-100'}`}>
           <Navbar />
           <main className="flex-grow pt-[80px]"> {/* Offset for fixed navbar */}
             <Routes>
@@ -47,6 +65,8 @@ function App() {
               <Route path="/vip-booking" element={<VIPBooking />} />
               <Route path="/catering" element={<Catering />} />
               <Route path="/contact" element={<Contact />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/gallery" element={<Gallery />} />
             </Routes>
           </main>
           <Footer />

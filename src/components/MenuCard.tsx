@@ -1,4 +1,4 @@
-import { ShoppingCart, MessageSquare } from 'lucide-react';
+import { Icon } from '@iconify/react';
 import { formatWhatsAppMessage } from '../utils/communication';
 
 const MenuCard = ({ item, serviceTitle }: any) => {
@@ -28,13 +28,13 @@ const MenuCard = ({ item, serviceTitle }: any) => {
         </div>
       </div>
       <div className="p-8 flex flex-col flex-grow">
-        <h3 className="text-xl font-serif text-white uppercase tracking-[1px] mb-2">{item.name}</h3>
+        <h3 className="text-xl font-serif text-text uppercase tracking-[1px] mb-2">{item.name}</h3>
         <p className="text-primary font-bold text-2xl mb-8">₦{item.price.toLocaleString()}</p>
         <button 
           onClick={handleOrder}
           className="mt-auto flex items-center justify-center gap-2 primary w-full text-xs py-4 px-0"
         >
-          <MessageSquare size={16} /> Pre-order on WhatsApp
+          <Icon icon="lucide:message-square" width="16" height="16" /> Pre-order on WhatsApp
         </button>
       </div>
     </div>

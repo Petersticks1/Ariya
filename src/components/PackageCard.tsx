@@ -1,7 +1,20 @@
-import { Check, ArrowRight } from 'lucide-react';
+import { Icon } from '@iconify/react';
 import { motion } from 'framer-motion';
 
-const PackageCard = ({ item, index, onSelect }) => {
+interface PackageItem {
+  id: string;
+  name: string;
+  price: string;
+  perks: string[];
+}
+
+interface PackageCardProps {
+  item: PackageItem;
+  index: number;
+  onSelect: (name: string) => void;
+}
+
+const PackageCard = ({ item, index, onSelect }: PackageCardProps) => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -20,7 +33,7 @@ const PackageCard = ({ item, index, onSelect }) => {
       )}
 
       <div className="relative z-10 mb-12">
-        <h3 className="text-2xl font-serif text-white uppercase tracking-[2px] mb-4">{item.name}</h3>
+        <h3 className="text-2xl font-serif text-text uppercase tracking-[2px] mb-4">{item.name}</h3>
         <div className="flex items-baseline gap-2 mb-8 group-hover:text-primary transition-colors">
           <span className="text-4xl md:text-5xl font-serif text-primary">₦{item.price}</span>
           <span className="text-text-muted text-xs uppercase tracking-[2px]">/ month</span>
@@ -29,7 +42,7 @@ const PackageCard = ({ item, index, onSelect }) => {
         <div className="space-y-4">
           {item.perks.map((perk, i) => (
             <div key={i} className="flex items-start gap-3">
-              <Check className="text-primary mt-1 flex-shrink-0" size={16} />
+              <Icon icon="lucide:check" className="text-primary mt-1 flex-shrink-0" width="16" height="16" />
               <p className="text-text-muted text-sm leading-relaxed">{perk}</p>
             </div>
           ))}
@@ -40,7 +53,7 @@ const PackageCard = ({ item, index, onSelect }) => {
         onClick={() => onSelect(item.name)}
         className="mt-auto primary w-full flex items-center justify-center gap-3 py-5 text-sm shadow-xl active:scale-95 transition-transform"
       >
-        Select Package <ArrowRight size={18} />
+        Select Package <Icon icon="lucide:arrow-right" width="18" height="18" />
       </button>
 
       {/* Subtle Background Accent */}
